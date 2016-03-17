@@ -38,3 +38,7 @@ commentUI.prototype.emptyFields = function(nameLocation, contentLocation) {
   $(nameLocation).val("");
   $(contentLocation).val("");
 };
+
+commentUI.prototype.commentPosted = function(alertLocation) {
+  $(alertLocation).html("<p>Your comment has been posted!</p>");
+};

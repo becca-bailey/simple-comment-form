@@ -13,11 +13,10 @@ $(document).ready(function() {
     ui.clearForm("#name", "#content", "#alerts");
 
     if (nameIsValid(name) && contentIsValid(content, limit)) {
-      var comment = new Comment(name, content);
-      $("#comments").append("<p>" + comment.content + "</p>" +
-        "<p>Posted by " + comment.author + "</p>");
+      postComment(name, content);
       ui.clearForm("#name", "#content", "#alerts");
       ui.emptyFields("#name", "#content");
+      ui.commentPosted("#alerts");
     }
 
     if (!nameIsValid(name)) {
@@ -38,4 +37,10 @@ var nameIsValid = function(name) {
 
 var contentIsValid = function(content, limit) {
   return(content.length <= limit && content.length > 0);
+};
+
+var postComment = function(name, content) {
+  var comment = new Comment(name, content);
+  $("#comments").append("<p>" + comment.content + "</p>" +
+  "<p>Posted by " + comment.author + "</p>");
 };
