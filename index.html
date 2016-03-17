@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Comment Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="commentUI.js"></script>
+    <script type="text/javascript" src="comment.js"></script>
+    <script type="text/javascript" src="commentController.js"></script>
+  </head>
+  <body>
+    <h1>Simple Comment Form</h1>
+    <div id="alerts"></div>
+    <form id="comment-form" action="index.html" method="post">
+      <input id="name" type="text" name="name" placeholder="Name"><br>
+      <textarea id="content" name="content" rows="8" cols="40"></textarea><br>
+      <div id="character-count"></div>
+      <input type="submit">
+    </form>
+    <div id="comments">
+
+    </div>
+
+  </body>
+</html>
